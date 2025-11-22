@@ -1,0 +1,125 @@
+html,
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 20px;
+  padding: 0;
+  position: relative; /* necessário para o ::before */
+  background-color: #f8f8f8;
+  overflow: hidden; /* opcional */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("./img/bg.jpg");
+  background-repeat: repeat;
+  background-size: 600px;
+  opacity: 0.4; /* afeta só o background */
+  z-index: -1; /* deixa atrás do conteúdo */
+}
+
+h1 {
+  font-family: "Fredoka One", sans-serif;
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+}
+
+h1 svg {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: #fff;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+div {
+  background: #fff;
+  max-width: 400px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+div > h1 {
+  text-align: center;
+}
+
+button {
+  background-color: #db6e2f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #bb5d26;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+i,
+i > * {
+  display: inline-block;
+  height: 1.8em;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+i:hover {
+  transform: rotate(15deg);
+  transition: transform 0.3s;
+}
